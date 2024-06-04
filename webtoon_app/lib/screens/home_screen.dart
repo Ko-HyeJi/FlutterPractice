@@ -49,10 +49,11 @@ class HomeScreen extends StatelessWidget {
     return ListView.separated(
       scrollDirection: Axis.horizontal,
       itemCount: snapshot.data!.length,
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       itemBuilder: (context, index) {
         final webtoon = snapshot.data![index];
-        return Webtoon(title: webtoon.title, thumb: webtoon.thumb, id: webtoon.id);
+        return Webtoon(
+            title: webtoon.title, thumb: webtoon.thumb, id: webtoon.id);
       },
       separatorBuilder: (context, index) => const SizedBox(
         width: 40,
